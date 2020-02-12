@@ -17,8 +17,10 @@ class BotsPage extends React.Component {
   render() {
     return (
       <div>
-        <YourBotArmy botsSelected={this.state.botsSelected} removeChosenBot={this.removeChosenBot}/>
-        {this.state.setBotSelected ? (
+        <YourBotArmy 
+          botsSelected={this.state.botsSelected} 
+          removeChosenBot={this.removeChosenBot}/>
+            { this.state.setBotSelected ? (
           <BotSpecs bot={this.state.setBotSelected} setChosenBot={this.setChosenBot} addChosenBot={this.addChosenBot}/>
           ) : (
           <BotCollection bots ={this.state.bots} setChosenBot={this.setChosenBot}/>
